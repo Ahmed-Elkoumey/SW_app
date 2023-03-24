@@ -1,0 +1,40 @@
+@import "../../assets/Theme/allColors.scss";
+
+header {
+  background-color: #fff;
+}
+#neubar {
+  background: #fff;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-nav .nav-link.active {
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px $SW_sceondary, 0px 0px 5px $SW_sceondary;
+  color: $SW_primary !important;
+  font-weight: 600;
+
+  &:hover {
+    color: $SW_text !important;
+
+    background-color: $SW_primary;
+    box-shadow: 0px 0px 5px $SW_primary, 0px 0px 5px $SW_primary;
+  }
+}
+
+
+
+#neubar .nav-item {
+  margin: auto 4px;
+}
+#neubar a {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+#neubar .dropdown-menu {
+  background: #545454;
+}
+a.navbar-brand {
+  color: #454545;
+}
