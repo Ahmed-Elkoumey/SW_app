@@ -50,10 +50,10 @@ export default function AddProducts() {
     fetch("https://scandiweb-elkoumey.000webhostapp.com/api/v1/add", {
       method: "POST",
       mode: "cors",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+      // headers: {
+      //   Accept: "application/json",
+      //   "Content-Type": "application/json",
+      // },
       body: JSON.stringify(productData),
     })
       .then((response) => {

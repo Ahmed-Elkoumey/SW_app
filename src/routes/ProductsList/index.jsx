@@ -32,6 +32,7 @@ export default function ProductList() {
     setItems([...items, ...newItems]); // add only the new skus to the items array
     return newItems;
   };
+
   const massDelete = async () => {
     try {
       const responses = await Promise.all(
@@ -39,13 +40,8 @@ export default function ProductList() {
           const response = await fetch(
             "https://scandiweb-elkoumey.000webhostapp.com/api/v1/delete",
             {
-              method: "DELETE",
-              headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-                "X-Requested-With": "XMLHttpRequest",
-              },
-              mode: "cors",
+              method: "POST",
+
               body: JSON.stringify({
                 sku: send,
               }),
@@ -64,10 +60,14 @@ export default function ProductList() {
     }
   };
   
+  
 
   useEffect(() => {
     let url = fetch("https://scandiweb-elkoumey.000webhostapp.com/api/v1/get",{
-      mode:"cors"
+      mode:"cors",
+      headers:{
+        "Origin":"*"
+      }
     })
       .then((res) => res.json())
       .then((data) => {
