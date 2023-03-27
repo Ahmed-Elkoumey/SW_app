@@ -81,12 +81,12 @@ export default function AddProducts() {
   return (
     <>
       <header>
-        <nav className="navbar navbar-expand-sm navbar-light" id="neubar">
+        <nav className="navbar  navbar-light" id="neubar">
           <div className="container">
             <span className="navbar-brand">
               <img src={Logo} height="50" alt="the logo" />
             </span>
-            <button
+            {/* <button
               className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
@@ -96,18 +96,18 @@ export default function AddProducts() {
               aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
-            </button>
+            </button> */}
 
-            <div className=" collapse navbar-collapse" id="navbarNavDropdown">
-              <ul className="navbar-nav ms-auto ">
+            <div className="d-flex" id="navbarNavDropdown">
+              <ul className="navbar-nav ms-auto flex-row">
                 <li className="nav-item" onClick={handleSubmit(onSubmit)}>
-                  <button className="btn border border-0 nav-link mx-2 active">
+                  <button className="btn border border-0 nav-link mx-2 active p-1">
                     Save
                   </button>
                 </li>
                 <Link to="/" className="nav-item">
                   <li className="nav-item">
-                    <button className="nav-link mx-2 active">cancel</button>
+                    <button className="nav-link mx-2 active p-1">cancel</button>
                   </li>
                 </Link>
               </ul>

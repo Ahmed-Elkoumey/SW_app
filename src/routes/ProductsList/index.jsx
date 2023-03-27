@@ -80,12 +80,12 @@ export default function ProductList() {
   return (
     <>
       <header>
-        <nav className="navbar navbar-expand-sm navbar-light" id="neubar">
+        <nav className="navbar  navbar-light" id="neubar">
           <div className="container">
             <span className="navbar-brand">
               <img src={Logo} height="50" alt="the logo" />
             </span>
-            <button
+            {/* <button
               className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
@@ -95,24 +95,24 @@ export default function ProductList() {
               aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
-            </button>
+            </button> */}
 
-            <div className=" collapse navbar-collapse" id="navbarNavDropdown">
-              <ul className="navbar-nav ms-auto ">
-                <li className="nav-item">
+            <div className="m-0 d-flex" id="navbarNavDropdown">
+              <ul className="navbar-nav ms-auto flex-row">
+                <li className="nav-item m-auto">
                   <Link to="add-product">
                     <button
-                      className="nav-link mx-2 active"
+                      className="nav-link mx-2 active p-1"
                       aria-current="page"
                     >
                       ADD
                     </button>
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item m-auto">
                   <button
                     id="delete-product-btn"
-                    className="btn border border-0 nav-link mx-2 active"
+                    className="btn border border-0 nav-link mx-2 active p-1"
                     aria-current="page"
                     onClick={massDelete}
                   >
